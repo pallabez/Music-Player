@@ -1,0 +1,22 @@
+.slider {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+    color: white;
+    background-color: lightblue;
+
+}
+
+
+
+.slides > div {
+    scroll-snap-align: start;
+    text-align: center;  
+}
