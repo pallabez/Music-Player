@@ -1,8 +1,12 @@
 :root {
-    --default-text-color: white;
+    --primary: white;
+    --secondary: rgb(196, 196, 196);
 }
 
 body {
+    color: rgb(230, 230, 230);
+    font-family: monospace;
+    font-size: 15px;
     background-color: #120b23;
 }
 
@@ -42,30 +46,37 @@ main > div {
 
 .section {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     overflow-X: auto;
 }
 
 /*trending*/
 
-#trending {
-    justify-content: space-evenly;
+#trending-container {
+    display: flex;
+    height: 10rem;
     align-items: center;
-    overflow: hidden;
-    height: 12rem;
 }
 
 .trending-card {
-    position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 6rem;
+    width: 6rem;
     border-radius: 2px;
-    overflow: hidden;
+
+    margin: 0.5rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    transition: 0.1s ease-in-out;
 }
 
 .trending-card:hover {
-    transform: scale(1.3);
-    z-index: 2;
-    box-shadow: 0 0 8px 4px rgb(26, 102, 107);
+    height: 8rem;
+    width: 8rem;
 }
 
 #t-content-1 {
@@ -74,11 +85,59 @@ main > div {
 
 #t-content-2 {
     background-color: pink;
-    z-index: 1;
 }
 
 #t-content-3 {
     background-color: lightskyblue;
+}
+
+/*latest release*/
+#latest-release > h3 {
+    margin: 0 2px;
+}
+
+#latest-release-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lr-card {
+    display: flex;
+    flex-grow: 1;
+}
+.lr-card > a {
+    display: flex;
+    text-decoration: none;
+}
+.lr-card > a:visited {
+    color: var(--secondary);
+}
+
+.lr-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 12rem;
+}
+.lr-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.lr-date {
+    font-size: 12px;
+}
+
+.lr-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lr-hamburger > a {
+    color: var(--secondary);
+}
+.lr-duration {
+    font-size: 11px;
 }
 
 /*----aside----*/
@@ -88,6 +147,9 @@ aside {
     margin: 0 auto;
     border: 4px solid black;
 }
+
+
+
 
 
 @media screen and (max-width: 1200px) {
