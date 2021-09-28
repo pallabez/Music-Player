@@ -10,21 +10,35 @@ body {
     background-color: #120b23;
 }
 
+.no-link-stlye {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 /*----header----*/
 
 header {
-    border:  4px solid black;
-    height: 3rem;
     width: 95%;
     margin: 0 auto;
 
     display: flex;
+    align-items: center;
 }
 
-header > div {
-    border: 2px solid black;
+#brand-logo > img{
+    border-radius: 50%;
+    background-color: #8096f8;
+    padding: 1px;
+    margin: 2px;
 }
 
+#favorite {
+    margin-right: auto;
+}
 /*----content---*/
 
 #content {
@@ -35,19 +49,18 @@ header > div {
 /*----main----*/
 
 main {
-    border: 4px solid black;
     width: 70%;
-}
-
-main > div {
-    border: 2px solid black;
-
 }
 
 .section {
     display: flex;
     flex-flow: column;
     overflow-X: auto;
+    margin: 2rem 0;
+}
+
+.section-heading {
+    margin: 4px 0.5rem;
 }
 
 /*trending*/
@@ -63,7 +76,7 @@ main > div {
     justify-content: center;
     align-items: center;
 
-    height: 6rem;
+    height: 8rem;
     width: 6rem;
     border-radius: 2px;
 
@@ -75,7 +88,7 @@ main > div {
 }
 
 .trending-card:hover {
-    height: 8rem;
+    height: 10rem;
     width: 8rem;
 }
 
@@ -92,9 +105,6 @@ main > div {
 }
 
 /*latest release*/
-#latest-release > h3 {
-    margin: 0 2px;
-}
 
 #latest-release-container {
     display: flex;
@@ -105,12 +115,16 @@ main > div {
     display: flex;
     flex-grow: 1;
 }
+
 .lr-card > a {
     display: flex;
-    text-decoration: none;
 }
 .lr-card > a:visited {
     color: var(--secondary);
+}
+.lr-card > a:hover {
+    background-color: #231544;
+    border-radius: 2px;
 }
 
 .lr-details {
@@ -140,12 +154,110 @@ main > div {
     font-size: 11px;
 }
 
+/*popular artists*/
+
+#pa-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pa-card {
+    margin: 1rem;
+}
+.pa-img > img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.pa-name {
+    text-align: center;
+    overflow: hidden;
+
+    font-family: sans-serif;
+}
+
+/*station*/
+
+#s-container {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+#station-logo {
+    margin-right: 2rem;
+}
+.s-card {
+    margin: 0.5rem;
+    flex-grow: 1;
+}
+
+.s-img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+
+    background-color: skyblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*category*/
+
+#c-container {
+    display: flex;
+}
+
+#c-container > a{
+    align-items: center;
+    margin: 0 0.5rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.c-card {
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+    background-size: 25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.1s ease-in;
+}
+
+#c-card-1 {
+    background-image: url(images/party.jpg);
+}
+
+#c-card-2 {
+    background-image: url(images/Electronics.jpg);
+}
+
+#c-card-3 {
+    background-image: url(images/road-trip.jpg);
+}
+
+.c-card:hover {
+    background-size: 20rem;
+}
+
+.c-heading {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--secondary);
+    background-color: rgba(19, 1, 39, 0.486);
+    border-radius: 4px;
+}
+
 /*----aside----*/
 
 aside {
     width: 25%;
     margin: 0 auto;
-    border: 4px solid black;
 }
 
 
