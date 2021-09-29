@@ -1,6 +1,8 @@
 :root {
     --primary: white;
     --secondary: rgb(196, 196, 196);
+    --tertiary: #231544;
+    --background-light: #28194d;
 }
 
 body {
@@ -35,7 +37,9 @@ header {
     padding: 1px;
     margin: 2px;
 }
-
+#brand-name {
+    margin-right: 1rem;
+}
 #favorite {
     margin-right: auto;
 }
@@ -123,7 +127,7 @@ main {
     color: var(--secondary);
 }
 .lr-card > a:hover {
-    background-color: #231544;
+    background-color: var(--tertiary);
     border-radius: 2px;
 }
 
@@ -159,6 +163,10 @@ main {
 #pa-container {
     display: flex;
     justify-content: space-between;
+}
+#pa-container > a:hover {
+    border-radius: 2px;
+    background-color: var(--tertiary);
 }
 
 .pa-card {
@@ -284,10 +292,13 @@ aside {
         display: none;
     }
 }
-@media screen and (max-width: 576px){
-    
+@media screen and (max-width: 576px){  
     #content {
-        padding: 1rem 0;
+        padding: 0;
+    }
+    main {
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
