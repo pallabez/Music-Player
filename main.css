@@ -3,13 +3,14 @@
     --secondary: rgb(196, 196, 196);
     --tertiary: #231544;
     --background-light: #160e2b;
+    --body: #120b23;
 }
 
 body {
     color: rgb(230, 230, 230);
     font-family: monospace;
     font-size: 15px;
-    background-color: #120b23;
+    background-color: var(--body);
 }
 
 .no-link-stlye {
@@ -30,29 +31,49 @@ body {
 /*----header----*/
 
 header {
+    margin-top: -0.8rem;
     width: 95%;
-    margin: 0 auto;
 
     display: flex;
     align-items: center;
+
+    position: fixed;
+    background-color: var(--body);
 }
 
-#brand-logo > img{
+#brand-logo > a > img{
     border-radius: 50%;
     background-color: #8096f8;
     padding: 1px;
     margin: 2px;
 }
-#brand-name {
-    margin-right: 1rem;
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    margin-left: 2rem;
 }
 #favorite {
     margin-right: auto;
+}
+#search-box {
+    
+}
+#profile {
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 5px solid var(--tertiary); 
+    margin: 0.5rem;
 }
 /*----content---*/
 
 #content {
     padding: 1rem 5%;
+    padding-top: 6rem;
     display: flex;
 }
 
@@ -75,6 +96,9 @@ main {
 
 /*trending*/
 
+#trending {
+    margin-top: 0;
+}
 #trending-container {
     display: flex;
     height: 10rem;
@@ -313,6 +337,7 @@ aside {
 @media screen and (max-width: 1200px) {
     #content {
         padding: 1rem;
+        padding-top: 6rem;
     }    
 }
 
@@ -333,10 +358,17 @@ aside {
 @media screen and (max-width: 576px){  
     #content {
         padding: 0;
+        padding-top: 4rem;
+    }
+    header {
+        margin-top: -0.4rem;
     }
     main {
         width: 100%;
         margin: 0 auto;
+    }
+    #navbar {
+        display: none;
     }
 }
 
