@@ -31,9 +31,8 @@ body {
 /*----header----*/
 
 header {
-    margin-top: -0.8rem;
-    width: 95%;
-
+    width: 100%;
+    top: -0.6rem;
     display: flex;
     align-items: center;
 
@@ -147,7 +146,8 @@ main {
 
 .lr-card {
     display: flex;
-    flex-grow: 1;
+    margin-right: 2rem;
+    flex-shrink: 1;
 }
 
 .lr-card > a {
@@ -330,9 +330,36 @@ aside {
     margin: 0 auto;
 }
 
+#queue-heading {
+    font-size: 30px;
+    font-weight: bold;
+}
 
 
+.q-li-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.q-main {
+    display: flex;
+    width: 15rem;
+    padding-top: 0.5rem;
+}
+
+.q-main:hover {
+    background-color: var(--tertiary);
+    border-radius: 2px;
+}
+.q-close {
+    color: var(--secondary);
+}
+.q-close:hover {
+    color: rgb(87, 86, 86);
+}
+
+/*----media tags----*/
 
 @media screen and (max-width: 1200px) {
     #content {
@@ -361,7 +388,7 @@ aside {
         padding-top: 4rem;
     }
     header {
-        margin-top: -0.4rem;
+        top: 0rem;
     }
     main {
         width: 100%;
